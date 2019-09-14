@@ -20,6 +20,8 @@
   },
   "homepage": "https://github.com/Dhanu084/codeal#readme",
   "dependencies": {
+    "ejs": "^2.7.1",
+    "express": "^4.17.1",
     "nodemon": "^1.19.2"
   }
 }

@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title><%= title %></title>
+        <link rel="stylesheet" href="css/home.css">    
+        <script src="https://kit.fontawesome.com/f3fe8d587b.js"></script>   
+    </head>
+    <body>
+        <h1>Todo list</h1>
+    </body>
+
+    <div id="form">
+    <form action="addTasks" method="POST" >
+        <label for="Description">Description</label>
+        <input type="text" name="description" id="desc" placeholder="What you want to do?">
+        <div class="selects">
+        <div class ="category">
+        <select name="category" id="">
+            <option value="personal">Personal</option>
+            <option value="work">Work</option>
+            <option value="family">Family</option>
+            <option value="medical">Medical</option>
+        </select>
+        </div>
+        <div id="todo-app">
+            <input type="date" name="date" id="date">
+        </div>
+
+        </div>
+        <div class="buttons">
+        <div class ="Tasks">
+        <button value="submit" id="add"> Add Tasks</button>
+        </div>
+        <div class ="Tasks" >
+        <button id="delete">Delete Tasks</button>
+        </div>
+        </div>
+    </form>
+    </div>
+
+    <div id="availabe_tasks">
+            <ul>
+                <% for (let i of tasks){%>
+                    <li> <div><%= i.description %> </div><div><%= i.category%> </div><%= i.date%> </div></li>
+                <% }%>
+            </ul>
+    </div>
+</html>
