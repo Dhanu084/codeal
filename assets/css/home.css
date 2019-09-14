@@ -10,6 +10,10 @@ h1{
     height: 50%;
     width: 100%;
 }
+#form{
+    height: 50%;
+    width: 100%;
+}
 
 #desc{
     width: 100%;
@@ -71,5 +75,35 @@ h1{
 #add{
 margin-left: 50%;
 background-color: gray;
+
+}
+
+#availabe_tasks{
+    margin-top: 5%;
+    height: auto;
+    width: 100%;
+    border-bottom: 1px solid gray;
+}
+#availabe_tasks ul{
+    list-style: none;
+}
+#availabe_tasks ul li{
+    width: 105%;
+    margin-left: -5.5%;
+    border-top: 1px solid gray;
+    line-height: 2rem;
+}
+
+#availabe_tasks #items{
+    display: inline-block;
+}
+#availabe_tasks #items input{
+    display: inline-block;
+}
+
+#availabe_tasks #todo-list{
+    display: inline-block;
+    height: 4rem;
+    width: 40%;
 
 }

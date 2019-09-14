@@ -3,17 +3,19 @@
         <title><%= title %></title>
         <link rel="stylesheet" href="css/home.css">    
         <script src="https://kit.fontawesome.com/f3fe8d587b.js"></script>   
+        
     </head>
     <body>
         <h1>Todo list</h1>
-    </body>
+    
 
-    <div id="form">
+    <div id="form" name="form1">
     <form action="addTasks" method="POST" >
         <label for="Description">Description</label>
-        <input type="text" name="description" id="desc" placeholder="What you want to do?">
+        <input type="text" name="description" id="desc" placeholder="What you want to do?" required>
         <div class="selects">
         <div class ="category">
+
         <select name="category" id="">
             <option value="personal">Personal</option>
             <option value="work">Work</option>
@@ -22,7 +24,7 @@
         </select>
         </div>
         <div id="todo-app">
-            <input type="date" name="date" id="date">
+            <input type="date" name="date" id="date" required>
         </div>
 
         </div>
@@ -31,17 +33,34 @@
         <button value="submit" id="add"> Add Tasks</button>
         </div>
         <div class ="Tasks" >
-        <button id="delete">Delete Tasks</button>
-        </div>
+                <button form="form2" id="delete" value="submit">Delete Tasks</button>
+                </div>
         </div>
     </form>
     </div>
 
+    <form action="deleteTasks" id="form2" name="form2" method="POST">
     <div id="availabe_tasks">
             <ul>
                 <% for (let i of tasks){%>
-                    <li> <div><%= i.description %> </div><div><%= i.category%> </div><%= i.date%> </div></li>
-                <% }%>
+                    <li name="list">
+                        <div id="items">
+                            <input type="checkbox" name="[<%= i.description %>,<%= i.date %>] " id="agreed" onchange='track(this);'>
+                        </div>
+                        <div id="todo-list">
+                            
+                            <div><p><%= i.category %><div><p><%= i.description %></p><%= i.date %></p></div>
+                        </div>
+                    </li>
+                <% } %>
+            
             </ul>
+            
     </div>
+    </form>
+
+    <script src="/js/checked.js"></script>
+</body>
+
+
 </html>
