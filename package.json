@@ -1,0 +1,25 @@
+{
+  "name": "todo-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dhanu084/codeal.git"
+  },
+  "keywords": [
+    "todo"
+  ],
+  "author": "Dhanush Kiran",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dhanu084/codeal/issues"
+  },
+  "homepage": "https://github.com/Dhanu084/codeal#readme",
+  "dependencies": {
+    "nodemon": "^1.19.2"
+  }
+}
