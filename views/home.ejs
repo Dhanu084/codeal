@@ -8,7 +8,7 @@
     <body>
         <h1>Todo list</h1>
     
-
+<!-- Add Tasks Form-->
     <div id="form" name="form1">
     <form action="addTasks" method="POST" >
         <label for="Description">Description</label>
@@ -39,13 +39,14 @@
     </form>
     </div>
 
+<!-- Deleting form-->
     <form action="deleteTasks" id="form2" name="form2" method="POST">
     <div id="availabe_tasks">
             <ul>
                 <% for (let i of tasks){%>
                     <li name="list">
                         <div id="items">
-                            <input type="checkbox" name="[<%= i.description %>,<%= i.date %>] " id="agreed" onchange='track(this);'>
+                            <input type="checkbox" name="<%= i.id %>" id="agreed" onchange='track(this);'>
                         </div>
                         <div id="todo-list">
                             

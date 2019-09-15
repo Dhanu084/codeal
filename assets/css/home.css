@@ -3,28 +3,31 @@ body{
     margin: auto;
     border: 1px solid black;
 }
+/*STyle for heading TODO list*/
 h1{
     text-align: center;
+    color:gray;
 }
-#form{
-    height: 50%;
-    width: 100%;
-}
+/*Height and width common for all forms*/
 #form{
     height: 50%;
     width: 100%;
 }
 
+/* Height and width of the description*/
 #desc{
     width: 100%;
     height: 5rem;
 }
-
+/*---------------------------------------------------------------------------------------------------*/
+/*The section which displays the the category drop down list and the date*/
 .selects{
     width: 100%;
     height: 7rem;;
     border: 0.5px solid black;
 }
+
+/*Style for category and date drop downs*/
 .selects .category,#todo-app{
     height: 100%;
     display: inline-block;
@@ -32,7 +35,7 @@ h1{
     margin: 1px;
     height: 100%;
 }
-
+/*Height and width of category drop downs*/
 .category select{
     font-size: 1rem;
     height: 99%;
@@ -40,15 +43,15 @@ h1{
     width: 100%;
     margin-left: 0%;
     border-style: none
-    border-right:1px solid black;
 }
 
+/*Style common for all buttons*/
 .buttons{
     height: 8rem;
     width: 100%;
 
 }
-
+/*To display divs enclosing buttons inline-block*/
 .buttons .Tasks{
     display: inline-block;
     height: 100%;
@@ -77,21 +80,25 @@ margin-left: 50%;
 background-color: gray;
 
 }
-
+/*---------------------------------------------------------------------------------------------------*/
+/* Section which prints the tasks from the DB*/
 #availabe_tasks{
     margin-top: 5%;
     height: auto;
     width: 100%;
     border-bottom: 1px solid gray;
 }
+/*remove default style of list*/
 #availabe_tasks ul{
     list-style: none;
+    overflow-y: scroll;
 }
+/*To expand the list to the width of the form*/
 #availabe_tasks ul li{
     width: 105%;
     margin-left: -5.5%;
     border-top: 1px solid gray;
-    line-height: 2rem;
+    line-height: 1rem;
 }
 
 #availabe_tasks #items{
