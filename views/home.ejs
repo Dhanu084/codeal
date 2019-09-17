@@ -30,10 +30,10 @@
         </div>
         <div class="buttons">
         <div class ="Tasks">
-        <button value="submit" id="add"> Add Tasks</button>
+        <button value="submit" id="add"><i class="fas fa-plus"></i> Add Tasks</button>
         </div>
         <div class ="Tasks" >
-                <button form="form2" id="delete" value="submit">Delete Tasks</button>
+                <button form="form2" id="delete" value="submit"><i class="fas fa-trash"></i>&nbspDelete Tasks</button>
                 </div>
         </div>
     </form>
@@ -50,7 +50,7 @@
                         </div>
                         <div id="todo-list">
                             
-                            <div><p><%= i.category %><div><p><%= i.description %></p><%= i.date %></p></div>
+                            <div><p><%= i.category %><div><p><%= i.description %></p><i class="far fa-calendar-times"></i>&nbsp;<%= i.date %></p></div>
                         </div>
                     </li>
                 <% } %>
