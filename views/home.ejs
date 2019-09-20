@@ -10,13 +10,17 @@
     
 <!-- Add Tasks Form-->
     <div id="form" name="form1">
+        <hr>
     <form action="addTasks" method="POST" >
         <label for="Description">Description</label>
         <input type="text" name="description" id="desc" placeholder="What you want to do?" required>
         <div class="selects">
         <div class ="category">
-
+            <div class="heading">
+                category
+            </div>
         <select name="category" id="">
+                <option value="default">Choose your category</option>
             <option value="personal">Personal</option>
             <option value="work">Work</option>
             <option value="family">Family</option>
@@ -60,7 +64,8 @@
     </div>
     </form>
 
-    <script src="/js/checked.js"></script>
+    <!-- <script src="/js/checked.js"></script> -->
+
 </body>
 
 

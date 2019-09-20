@@ -1,4 +1,4 @@
-
+//works only when the first checkbox is selected so not using this js file
 console.log('JS loaded')
 function track(){
 var agreed = document.getElementById('agreed');

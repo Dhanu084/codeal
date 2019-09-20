@@ -52,7 +52,7 @@ module.exports.deleteTasks=function(req,res){
             }
             
         })
-        res.redirect('back');
+        
     })
         
     // Object.keys(req.body).forEach(function(key){
@@ -68,5 +68,5 @@ module.exports.deleteTasks=function(req,res){
     // let desc = Object.keys(req.body[0]);
     // let index = tasks.findIndex(task => task.description==desc);
     // tasks.splice(index,1);
-  
+    res.redirect('back');
     };
