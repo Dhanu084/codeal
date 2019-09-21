@@ -45,16 +45,17 @@
 
 <!-- Deleting form-->
     <form action="deleteTasks" id="form2" name="form2" method="POST">
-    <div id="availabe_tasks">
+    <div id="availabe_tasks" ">
             <ul>
                 <% for (let i of tasks){%>
-                    <li name="list">
+                    <li name="list" class="lsts">
                         <div id="items">
-                            <input type="checkbox" name="<%= i.id %>" id="agreed" onchange='track(this);'>
+                            <input type="checkbox" name="<%= i.id %>" class="agreed" onchange='track(this);'>
                         </div>
                         <div id="todo-list">
                             
-                            <div><p><%= i.category %><div><p><%= i.description %></p><i class="far fa-calendar-times"></i>&nbsp;<%= i.date %></p></div>
+                            <div><p><%= i.description %></p><i class="far fa-calendar-times"></i>&nbsp;<%= i.date %></p></div>
+                            <div id="available_category" class="ctgs" style="width: 7rem"><p style="color: white" class="available_category_p"><%= i.category %></p></div>
                         </div>
                     </li>
                 <% } %>
@@ -64,7 +65,7 @@
     </div>
     </form>
 
-    <!-- <script src="/js/checked.js"></script> -->
+    <script src="/js/checked.js"></script>
 
 </body>
 

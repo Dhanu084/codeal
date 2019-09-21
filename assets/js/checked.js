@@ -1,19 +1,44 @@
-//works only when the first checkbox is selected so not using this js file
-console.log('JS loaded')
+//To change the color of category when window loads
+window.addEventListener('load',function(){
+    var p = document.getElementsByClassName('ctgs');
+    //console.log(p);
+   console.log(p.length)
+    for(let i=0;i<p.length;i++){
+        //console.log(p[i].innerHTML.toLocaleLowerCase());
+        val = document.getElementsByClassName('available_category_p');
+        console.log(val[i].innerHTML.toLocaleLowerCase());
+        if(val[i].innerHTML.toLocaleLowerCase()=='personal'){
+            p[i].style.backgroundColor="green"; 
+        }
+        else if(val[i].innerHTML.toLocaleLowerCase()=='family'){
+            p[i].style.backgroundColor='blue';
+        }
+        else if(val[i].innerHTML.toLocaleLowerCase()=='medical'){
+            p[i].style.backgroundColor="red";
+        }
+        else if(val[i].innerHTML.toLocaleLowerCase()=='work'){
+            p[i].style.backgroundColor='maroon';
+        }
+        
+    }
+});
+
+
+
+
+//To style the elements when checkbox is clicked
+
 function track(){
-var agreed = document.getElementById('agreed');
-var ps=document.getElementsByTagName('p');
-
-if (agreed.checked == true){
-    for(let i=0;i<ps.length;i++){
-        ps[i].style.textDecoration="line-through";
+    console.log('function called');
+var agreed = document.getElementsByClassName('agreed');
+for(let i=0;i<agreed.length;i++){
+    var p = document.getElementsByClassName('lsts');
+    if (agreed[i].checked==true){
+        //p[i].style.textDecoration='line-through';
+        p[i].style.textDecoration='line-through'
     }
-
-}
-else{
-    for(let i=0;i<ps.length;i++){
-        ps[i].style.textDecoration=null;
+    else{
+        p[i].style.textDecoration='none'
     }
 }
-
 }

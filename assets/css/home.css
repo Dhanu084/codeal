@@ -55,6 +55,9 @@ h1{
     color: gray;
     width: 25rem;
 }
+
+
+
 .heading{
     font-size:1.5rem;
     margin-left: 5%;
@@ -114,12 +117,14 @@ background-color: gray;
 /* Section which prints the tasks from the DB*/
 #availabe_tasks{
     margin-top: 5%;
+    margin-left: -5%;
     height: 400px;
-    width: 100%;
-    border-bottom: 1px solid gray;
+    width: 105%;
+;
 }
 /*remove default style of list*/
 #availabe_tasks ul{
+    overflow: hidden;
     height: 100%;
     list-style: none;
     overflow-y: scroll;
@@ -127,29 +132,38 @@ background-color: gray;
 /*To expand the list to the width of the form*/
 #availabe_tasks ul li{
     width: 105%;
-    margin-left: -5.5%;
     border-top: 1px solid gray;
     line-height: 1rem;
 }
 
-#availabe_tasks #items{
-    display: inline-block;
-}
-#availabe_tasks #items input{
-    display: inline-block;
-}
 
 #availabe_tasks #todo-list{
-    display: inline-block;
-    height: 4rem;
-    width: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    height: 7rem;
+    width: 100%;
+    justify-content: space-around;
+    text-align: center;
 
 }
 
-.fa-plus{
-    color: white;
+#todo-list div{
+    width:12rem;
+}
+#todo-list div{
+    color:grey;
     font-size: 1.2rem;
 }
+
+
+#available_category{
+    margin-top: 20px;
+    color: white;
+    height: 3rem;
+    width: 7rem;
+    text-align: center;
+}
+
 
 /*-----------------------------------------------------------------------------------------*/
 /*For font awesome icons*/
@@ -157,6 +171,11 @@ background-color: gray;
     color: white;
     font-size: 1.2rem;
 }
+.fa-plus{
+    color: white;
+    font-size: 1.2rem;
+}
+
 
 .fa-calendar-times{
     font-size: 1.2rem;
